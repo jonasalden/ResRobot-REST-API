@@ -1,0 +1,70 @@
+﻿@model jonasalden_travelplanner.ViewModels.TicketsViewModel
+@{
+    ViewBag.Title = "Index";
+}
+@if (TempData["Message"] != null)
+{
+<div class="row">
+    <div class="alert @TempData["Type"]" role="alert">@TempData["Message"]</div>
+</div>
+}
+@if (Model.DestName == null)
+{
+    <div class="col-md-12">
+        @using (Html.BeginForm("Index", "Travels", FormMethod.Post))
+        {
+            <div class="row">
+                <div class="col-md-6">
+                    @Html.LabelFor(x => x.DepName, "Department")
+                    @Html.TextBoxFor(x => x.DepName, new {@readonly = "readonly", @class = "form-control"})
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    @Html.LabelFor(x => x.DestName, "Destination")
+                    @Html.TextBoxFor(x => x.DestName, new { @class = "form-control", @pattern = "^[a-zåäöA-ZÅÄÖ 0-9]*$", @maxlength = 50})
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 30px;">
+                    <input type="submit" id="submitButton" class="btn btn-success" />
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        }
+    </div>
+}
+@if (Model.DestName != null)
+{
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-12">
+                <h1>Ticket Details</h1>
+            </div>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">From: @Model.DepName</th>
+                        <th></th>
+                        <th scope="col">To: @Model.DestName</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Depature time: @Model.DepTime</td>
+                        <td></td>
+                        <td>Arriving time: @Model.DestTime</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="col-md-6">
+                <span><b>Degrees:</b> @Model.Celsius°C</span>
+            </div>
+            <div class="col-md-6">
+                <span><b>Forecast at destination:</b> @Model.ForecastName</span>
+            </div>
+        </div>
+    </div>
+}
