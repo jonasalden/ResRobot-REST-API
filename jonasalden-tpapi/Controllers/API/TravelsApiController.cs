@@ -34,7 +34,7 @@ namespace jonasalden_tpapi.Controllers.API
                     var json = JObject.Parse(content);
                     var id = json["StopLocation"].First()["id"].Value<string>();
                     var travelResponse = await client.GetAsync(
-                        "https://api.resrobot.se/v2/trip?key=2421cf20-34c0-4e25-be59-67525ad2eb0e&originId=" +
+                        "https://api.resrobot.se/v2/trip?key=<API KEY>&originId=" +
                         model.DepId + "&destId=" + id + "&format=json");
 
                     if (travelResponse.IsSuccessStatusCode)
