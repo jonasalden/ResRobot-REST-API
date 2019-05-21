@@ -25,7 +25,7 @@ namespace jonasalden_tpapi.Controllers.API
             {
                 var locationResponse =
                     await client.GetAsync(
-                        "https://api.resrobot.se/v2/location.name?key=2421cf20-34c0-4e25-be59-67525ad2eb0e&format=json&input=" +
+                        "https://api.resrobot.se/v2/location.name?key=<API KEY>&format=json&input=" +
                         destName);
 
                 if (locationResponse.IsSuccessStatusCode)
