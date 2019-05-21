@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jonasalden-travelplanner", "jonasalden-travelplanner\jonasalden-travelplanner.csproj", "{D3D7BB19-16EE-4376-98D8-EDAC93A21AEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jonasalden-tpapi", "jonasalden-tpapi\jonasalden-tpapi.csproj", "{BC43C3AD-75D4-4DA6-A70C-458951AF1AFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3D7BB19-16EE-4376-98D8-EDAC93A21AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3D7BB19-16EE-4376-98D8-EDAC93A21AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3D7BB19-16EE-4376-98D8-EDAC93A21AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3D7BB19-16EE-4376-98D8-EDAC93A21AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC43C3AD-75D4-4DA6-A70C-458951AF1AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC43C3AD-75D4-4DA6-A70C-458951AF1AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC43C3AD-75D4-4DA6-A70C-458951AF1AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC43C3AD-75D4-4DA6-A70C-458951AF1AFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D327903-FF7D-44C1-ADBC-5D9275727ED3}
+	EndGlobalSection
+EndGlobal
